@@ -1,5 +1,7 @@
 package com.example.BIODAM.controller;
 
+import com.example.BIODAM.model.Producto;
+import com.example.BIODAM.services.ProductoServicio;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,8 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-public class ProductoControlador {
 
     @Controller
     @RequestMapping("/producto")

@@ -48,6 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .permitAll();
 
         //Para enviar correos leer https://www.thymeleaf.org/doc/articles/springmail.html
+
         // Añadimos esto para poder seguir accediendo a la consola de H2
         // con Spring Security habilitado.
         http.csrf().disable();

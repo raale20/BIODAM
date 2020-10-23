@@ -1,0 +1,8 @@
+INSERT INTO PRODUCTO (ID, NOMBRE, PRECIO, ESTADO)
+VALUES (NEXTVAL('hibernate_sequence'), 'Manzanas',3.4, TRUE);
+
+INSERT INTO PRODUCTO (ID, NOMBRE, PRECIO, ESTADO)
+VALUES (NEXTVAL('hibernate_sequence'), 'Sandía',10.99, TRUE);
+
+INSERT INTO PRODUCTO (ID, NOMBRE, PRECIO, ESTADO)
+VALUES (NEXTVAL('hibernate_sequence'), 'Brocoli',3.4, FALSE);

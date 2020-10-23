@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/formulario.css">
+    <link rel="stylesheet" th:href="@{./css/estilos.css}">
     <title>Formulario Loggin</title>
 </head>
 <body>
     <header>
-        <img src="../img/BIODAM.png">
+        <img th:src="@{./img/BIODAM.png}" alt='BIODAM'/>
     </header>
+
+    <aside class="izq">
+        <img th:src="@{./img/aside1.jpg}" alt='aside1'/>
+    </aside>
+
+    <aside class="der">
+        <img th:src="@{./img/aside2.jpg}" alt='aside2'/>
+    </aside>
+
+    <div class="form1">
+        <H1>FORMULARIO:</H1>
+        <form method="POST">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="pass">Contraseña:</label><br>
+            <input type="password" id="pass" name="pass">
+            <br>
+            <input type="submit" value="Acceder">
+        </form>
+    </div>
 </body>
 </html>

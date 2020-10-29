@@ -15,10 +15,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-    private final UserDetailsService userDetailsService;
     private final CustomSuccessHandler customSuccessHandler;
-    private final PasswordEncoder passwordEncoder;
+    private final UserDetailsService userDetailsService;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -28,6 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+
     }
 
     @Override
@@ -37,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                    .antMatchers("/public/css/**", "/js/**").permitAll()
+                    .antMatchers("/css/**", "/img/**", "/formularioRegistro", "/listadoProductos", "/detallesProducto").permitAll()
                     .antMatchers("/admin/**").hasRole("ADMIN")//Establecemos el permiso ADMIN
                     .antMatchers("/user/**").hasRole("USER")//Establecemos el permiso USER
                     .anyRequest().authenticated()
@@ -62,8 +61,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().frameOptions().disable();
 
         // @formatter:o
-
-
 
     }
 }

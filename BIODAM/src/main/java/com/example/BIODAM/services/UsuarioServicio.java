@@ -1,7 +1,10 @@
 package com.example.BIODAM.services;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
+import com.example.BIODAM.model.Producto;
 import com.example.BIODAM.model.Usuario;
 import com.example.BIODAM.repos.UsuarioRepositorio;
 import com.example.BIODAM.services.base.ServicioBase;
@@ -16,6 +19,14 @@ public class UsuarioServicio extends ServicioBase<Usuario, Long, UsuarioReposito
 
     public Optional<Usuario> buscarPorEmail(String email) {
         return repositorio.findFirstByEmail(email);
+    }
+
+    public List<Usuario> todosLosUsuarios() {
+        return this.findAll().stream()
+                .map(p -> {
+                    p.getNombre();
+                    return p;
+                }).collect(Collectors.toUnmodifiableList());
     }
 
 }

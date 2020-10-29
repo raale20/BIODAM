@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+    <title>Detalles Producto</title>
+</head>
+<body>
+<header>
+    <img th:src="@{/img/BIODAM.png}" alt='BIODAM'/>
+    <div>
+        <li>
+            <a th:href="@{/formularioRegistro}">Registrarte</a>
+        </li>
+        <li>
+            <a>Inicia sesión</a>
+        </li>
+    </div>
+</header>
+
+<aside class="izq">
+    <img th:src="@{/img/aside1.jpg}" alt='aside1'/>
+</aside>
+
+<aside class="der">
+    <img th:src="@{/img/aside2.jpg}" alt='aside2'/>
+</aside>
+
+<div>
+    <h1>Estamos en los detalles de un producto</h1>
+</div>
+</body>
+</html>

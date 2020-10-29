@@ -8,6 +8,14 @@
 <body>
     <header>
         <img th:src="@{./img/BIODAM.png}" alt='BIODAM'/>
+        <div>
+            <li>
+                <a th:href="@{/formularioRegistro}">Registrarte</a>
+            </li>
+            <li>
+                <a>Inicia sesión</a>
+            </li>
+        </div>
     </header>
 
     <aside class="izq">
@@ -20,11 +28,15 @@
 
     <div class="form1">
         <H1>FORMULARIO:</H1>
-        <form method="POST">
+        <form th:action="@{/UsuarioControlador}" th:object="${UsuarioForm}" method="post">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" th:field="*{nombre}" name="nombre"><br>
+            <label for="apellidos">Apellidos:</label><br>
+            <input type="text" id="apellidos" th:field="*{apellidos}" name="apellidos"><br>
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
+            <input type="email" id="email" th:field="*{email}" name="email"><br>
             <label for="pass">Contraseña:</label><br>
-            <input type="password" id="pass" name="pass">
+            <input type="password" id="pass" th:field="*{password}" name="pass">
             <br>
             <input type="submit" value="Acceder">
         </form>

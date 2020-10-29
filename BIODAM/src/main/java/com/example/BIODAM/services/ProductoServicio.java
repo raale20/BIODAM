@@ -18,6 +18,11 @@ public class ProductoServicio extends ServicioBase<Producto, Long, ProductoRepos
         super(repo);
     }
 
-    //Tengo que pillar el método de poner todo en mayúsculas y quitarle eso para que muestre todo los productos
-    //Por eso el error en ProductoControlador
+    public List<Producto> todosLosProductos() {
+        return this.findAll().stream()
+                .map(p -> {
+                    p.getNombre();
+                    return p;
+                }).collect(Collectors.toUnmodifiableList());
+    }
 }

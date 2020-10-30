@@ -15,7 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class UsuarioControlador {
 
-    private final UsuarioServicio usuarioServicio;
+    private UsuarioServicio usuarioServicio;
+
+    public UsuarioControlador(UsuarioServicio usuarioServicio) {
+        this.usuarioServicio = usuarioServicio;
+    }
 
     @GetMapping("/")
     public String list(Model model) {

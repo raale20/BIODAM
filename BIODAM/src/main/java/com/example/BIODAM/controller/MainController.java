@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
     @Autowired
-    private UsuarioServicio UsuService;
+    private UsuarioServicio UsuarioServicio;
 
     @GetMapping({"/index","/"})
     public String index() {

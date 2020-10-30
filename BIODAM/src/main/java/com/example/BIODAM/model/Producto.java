@@ -29,5 +29,27 @@ public class Producto {
         Nombre = nombre;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Double getPrecio() {
+        return Precio;
+    }
+
+    public void setPrecio(Double precio) {
+        Precio = precio;
+    }
+
+    public Boolean getEstado() {
+        return Estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        Estado = estado;
+    }
 }

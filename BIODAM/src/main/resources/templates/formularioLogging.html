@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{./css/estilos.css}">
+    <title>Formulario Loggin</title>
+</head>
+<body>
+<header>
+    <img th:src="@{./img/BIODAM.png}" alt='BIODAM'/>
+    <div>
+        <li>
+            <a th:href="@{/formularioRegistro}">Registrarte</a>
+        </li>
+        <li>
+            <a th:href="@{/formularioRegistro}">Inicia Sesión</a>
+        </li>
+    </div>
+</header>
+
+<aside class="izq">
+    <img th:src="@{./img/aside1.jpg}" alt='aside1'/>
+</aside>
+
+<aside class="der">
+    <img th:src="@{./img/aside2.jpg}" alt='aside2'/>
+</aside>
+
+<div class="form1">
+    <H1>FORMULARIO DE INICIO DE SESIÓN:</H1>
+    <form th:action="@{/UsuarioControlador}" th:object="${UsuarioForm}" method="post">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" th:field="*{email}" name="email"><br>
+        <label for="pass">Contraseña:</label><br>
+        <input type="password" id="pass" th:field="*{password}" name="pass">
+        <br>
+        <input type="submit" value="Acceder">
+    </form>
+</div>
+</body>
+</html>

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
     @RequiredArgsConstructor
     public class ProductoControlador {
 
-        private final ProductoServicio productoServicio;
+        private ProductoServicio productoServicio;
 
         @GetMapping("/")
         public String list(Model model) {

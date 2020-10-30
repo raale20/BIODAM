@@ -22,6 +22,10 @@ import java.util.Collection;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Usuario implements UserDetails {
 
+    //Habría sido una buena idea ponerle un atributo booleano al usuario que fuese
+    // "esperandoConfirmación" para que el administrador viese sólo los usuarios
+    // que tuviesen ese atributo a TRUE, y los pudiera aceptar o denegar rápidamente
+
     @Id @GeneratedValue
     private Long id;
 

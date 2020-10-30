@@ -10,11 +10,11 @@
     <img th:src="@{/img/BIODAM.png}" alt='BIODAM'/>
     <div>
         <li>
-            <a th:href="@{/index}">Cerrar Sesión</a>
+            <a th:href="@{/index}" href="logout">Cerrar Sesión</a>
         </li>
     </div>
 </header>
-
+<form th:action="@{/logout}" method="post" id="logout"></form> //Para cerrar la sesión
 <aside class="izq">
     <img th:src="@{/img/aside1.jpg}" alt='aside1'/>
 </aside>
@@ -26,5 +26,6 @@
 <div>
     <h1>Estamos en el Index Loggeado</h1>
 </div>
+
 </body>
 </html>
